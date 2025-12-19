@@ -48,10 +48,12 @@ function ServicesSelector() {
     );
 
     const mensajeWhatsApp = servicioSeleccionado
-        ? `Hola! Quiero reservar un turno para ${servicioSeleccionado.name}`
+        ? `Hola Eli 👋
+            Revisé tu página web y quería saber cuándo tenés un lugar disponible para ${servicioSeleccionado.name} 💅✨`
         : '';
 
-    const whatsappLink = `https://wa.me/549XXXXXXXXXX?text=${encodeURIComponent(mensajeWhatsApp)}`;
+
+    const whatsappLink = `https://wa.me/5491154922800?text=${encodeURIComponent(mensajeWhatsApp)}`;
 
     return (
         <section>
@@ -73,6 +75,7 @@ function ServicesSelector() {
                             layout
                             transition={{ type: "spring", stiffness: 300, damping: 25 }}
                             className={activo ? "service-card activo" : "service-card"}
+                            id='services'
                         >
                             <motion.button
                                 whileTap={{ scale: 0.95 }}
