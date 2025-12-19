@@ -1,0 +1,99 @@
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  box-shadow: inset 0 0 120px rgba(242, 184, 198, 0.15);
+
+}
+
+h1,
+h2 {
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6;
+}
+
+* {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+:root {
+  --pink-main: #f2b8c6;
+  --pink-soft: #fdecef;
+  --pink-dark: #e59aa9;
+
+  --white: #ffffff;
+  --gray-100: #fafafa;
+  --gray-300: #e5e5e5;
+  --gray-700: #444444;
+  --black-soft: #111111;
+
+  --whatsapp: #25d366;
+  --whatsapp-shadow: rgba(37, 211, 102, 0.35);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--gray-100);
+  color: var(--black-soft);
+
+
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}

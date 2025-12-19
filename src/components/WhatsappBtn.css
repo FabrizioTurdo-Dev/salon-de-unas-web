@@ -1,0 +1,35 @@
+.wpp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  background-color: #e8c1cc; /* rosa pastel */
+  color: #1a1a1a;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.wpp-float svg {
+  flex-shrink: 0;
+}
+
+.wpp-float.activo {
+  background-color: #25d366; /* WhatsApp */
+  color: white;
+}
+
+.wpp-float span {
+  font-weight: 600;
+  white-space: nowrap;
+}
