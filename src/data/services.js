@@ -13,7 +13,7 @@ const services = [
         name: "Semipermanentes",
         descripcion: "Coloración duradera por semanas, ideal para manos y pies.",
         precio: 13000,
-        imagen: `${base}Semipermanentes.jpg`
+        imagen: `${base}Semipermanente.jpg`
     },
     {
         id: 3,
