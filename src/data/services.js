@@ -1,24 +1,26 @@
+const base = import.meta.env.BASE_URL;
+
 const services = [
     {
         id: 1,
         name: "Uñas esculpidas",
         descripcion: "Gel, Acrílico y Poligel. Largos y formas personalizadas.",
         precio: 10000,
-        imagen: "/Esculpidas.jpg"
+        imagen: `${base}Esculpidas.jpg`
     },
     {
         id: 2,
         name: "Semipermanentes",
         descripcion: "Coloración duradera por semanas, ideal para manos y pies.",
         precio: 13000,
-        imagen: "/Semipermanente.jpg"
+        imagen: `${base}Semipermanentes.jpg`
     },
     {
         id: 3,
         name: "Kapping",
         descripcion: "Refuerzo en uñas naturales con base Rubber o Acrílico.",
         precio: 12500,
-        imagen: "/kapping.jpg"
+        imagen: `${base}Kapping.jpg`
 
     },
     {
