@@ -27,15 +27,35 @@ function ServicesSelector() {
         hidden: {},
         visible: {
             transition: {
-                staggerChildren: 0.12
+                staggerChildren: 0.25,   // más separación entre cards
+            }
+        }
+    };
+    const itemLeft = {
+        hidden: { opacity: 0, x: -80 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
             }
         }
     };
 
-    const item = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
+    const itemRight = {
+        hidden: { opacity: 0, x: 80 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
     };
+
+
 
     function alternarServicio(id) {
         setSelectedServices(prev =>
@@ -56,41 +76,61 @@ function ServicesSelector() {
     const whatsappLink = `https://wa.me/5491154922800?text=${encodeURIComponent(mensajeWhatsApp)}`;
 
     return (
-        <section>
+        <section id='services'>
             <h2>Elegí tu servicio</h2>
 
             <motion.ul
                 variants={container}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{
+                    once: true,        // se anima una sola vez
+                    amount: 0.2        // empieza cuando entra el 20% de la card
+                }}
             >
-                {services.map(service => {
+                {services.map((service, index) => {
                     const activo = servicioSeleccionado?.id === service.id;
+                    const variants = index % 2 === 0 ? itemLeft : itemRight;
 
                     return (
                         <motion.li
                             key={service.id}
-                            variants={item}
-                            layout
-                            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                            variants={variants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
                             className={activo ? "service-card activo" : "service-card"}
-                            id='services'
                         >
-                            <motion.button
-                                whileTap={{ scale: 0.95 }}
-                                whileHover={{ scale: 1.03 }}
-                                className={activo ? "seleccionado" : ""}
-                                onClick={() => alternarServicio(service.id)}
-                            >
-                                {service.name}
-                            </motion.button>
 
 
-                            <p>{service.descripcion}</p>
-                            <img src={service.imagen} alt={service.name} className='service-image' />
-                            <p>${service.precio.toLocaleString('es-AR')}</p>
+                            <div className="service-image-wrapper">
+                                <img
+                                    src={service.imagen}
+                                    alt={service.name}
+                                    className="service-image"
+                                />
+                            </div>
+
+                            <div className="service-content">
+                                <h3>{service.name}</h3>
+
+                                <p className="service-desc">
+                                    {service.descripcion}
+                                </p>
+
+                                <p className="service-price">
+                                    ${service.precio.toLocaleString('es-AR')}
+                                </p>
+
+                                <button
+                                    className={`service-select ${activo ? "seleccionado" : ""}`}
+                                    onClick={() => alternarServicio(service.id)}
+                                >
+                                    {activo ? "Servicio seleccionado ✓" : "Seleccionar servicio"}
+                                </button>
+                            </div>
                         </motion.li>
+
                     );
                 })}
             </motion.ul>

@@ -1,144 +1,188 @@
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+
 section {
-    padding: 4rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
 section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
-/* GRID */
+/* =========================
+   LISTADO DE SERVICIOS
+========================= */
+
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
 }
 
-/* CARD */
-li {
-    background-color: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    padding-bottom: 1rem;
-}
-
-li button {
-    margin: 1rem;
-}
-
-li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-
-li p {
-    color: black;
-    display: flex;
-    justify-content: center;
-}
-
-/* IMAGE */
-
-.service-image {
-    width: 100%;
-    height: 180px;
-
-    object-fit: cover;
-    object-position: center top;
-
-    border-radius: 12px;
-}
-
-/* CONTENT */
-li p {
-    padding: 0 1.2rem;
-    margin: 0.5rem 0;
-    opacity: 0.8;
-}
-
-li p:last-of-type {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.cta-wpp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 2rem;
-    padding: 14px 24px;
-
-    background-color: var(--whatsapp);
-    box-shadow: 0 8px 20px var(--whatsapp-shadow);
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-
-    border-radius: 999px;
-    /* botón pill */
-    text-decoration: none;
-
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-wpp:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 26px rgba(37, 211, 102, 0.45);
-}
-
-.service-card button {
-    /* background-color: var(--gray-100); */
-    background-color: #e26a8d;
-    color: var(--black-soft);
-}
-
-.service-card.activo button {
-    background-color: var(--pink-main);
-}
-
-
-
-/*cards*/
+/* =========================
+   CARD DE SERVICIO
+========================= */
 
 .service-card {
-    background-color: var(--white);
-    border: 1px solid var(--gray-300);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  background: #fff;
+  border-radius: 24px;
+  padding: 2.5rem;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card activa */
 .service-card.activo {
-    box-shadow:
-        0 0 0 2px var(--pink-main),
-        0 18px 40px rgba(242, 184, 198, 0.35);
+  box-shadow: 0 28px 65px rgba(140, 59, 118, 0.25);
 }
 
-.service-card.activo button::after {
-    content: " ✓";
+/* Alternar imagen/texto */
+.service-card:nth-child(even) {
+  direction: rtl;
 }
 
-.service-card.activo {
-    animation: pulse 0.2s ease-out;
+.service-card:nth-child(even) * {
+  direction: ltr;
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
-    }
+/* =========================
+   IMAGEN
+========================= */
 
-    100% {
-        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-    }
+.service-image-wrapper {
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.service-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #3a1c3f;
+}
+
+.service-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.service-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: #8c3b76;
+}
+
+/* =========================
+   BOTÓN SELECCIONAR SERVICIO
+========================= */
+
+.service-select {
+  align-self: flex-start;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px solid #e7b6d2;
+
+  background: transparent;
+  color: #8c3b76;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.service-select:hover {
+  background: #f6d4e7;
+}
+
+.service-select.seleccionado {
+  background: #8c3b76;
+  color: #fff;
+  border-color: #8c3b76;
+}
+
+/* =========================
+   BOTÓN WHATSAPP FLOTANTE
+========================= */
+
+.wpp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  background: var(--whatsapp);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 10px 30px var(--whatsapp-shadow);
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+}
+
+.wpp-float.activo {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .service-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .service-image-wrapper {
+    height: 240px;
+  }
+
+  .service-select {
+    width: 100%;
+    text-align: center;
+  }
 }
