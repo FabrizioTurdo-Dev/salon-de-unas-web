@@ -1,99 +1,123 @@
-body {
-  font-family: 'Poppins', system-ui, sans-serif;
-  box-shadow: inset 0 0 120px rgba(242, 184, 198, 0.15);
+/* =====================
+   DESIGN SYSTEM
+===================== */
 
-}
+@import './styles/design-system.css';
 
-h1,
-h2 {
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-weight: 600;
-}
-
-p {
-  line-height: 1.6;
-}
+/* =====================
+   RESET / BASE
+===================== */
 
 * {
-  transition: background-color 0.25s ease, color 0.25s ease;
+  box-sizing: border-box;
 }
 
-:root {
-  --pink-main: #f2b8c6;
-  --pink-soft: #fdecef;
-  --pink-dark: #e59aa9;
-
-  --white: #ffffff;
-  --gray-100: #fafafa;
-  --gray-300: #e5e5e5;
-  --gray-700: #444444;
-  --black-soft: #111111;
-
-  --whatsapp: #25d366;
-  --whatsapp-shadow: rgba(37, 211, 102, 0.35);
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--gray-100);
-  color: var(--black-soft);
 
+  font-family: var(--font-main);
+  background-color: var(--color-bg-main);
+  color: var(--text-main);
 
+  box-shadow: inset 0 0 120px rgba(145, 20, 57, 0.08);
 }
 
+/* =====================
+   TRANSICIONES GLOBALES
+===================== */
+
+* {
+  transition: background-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+/* =====================
+   TEXTOS
+===================== */
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  font-weight: var(--fw-semibold);
+  color: var(--text-soft);
+  margin: 0;
+}
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: var(--fs-xxl);
 }
 
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+p {
+  line-height: 1.6;
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =====================
+   LINKS
+===================== */
+
+a {
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* =====================
+   BOTONES (BASE)
+===================== */
+
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+
+  padding: 0.7em 1.6em;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
   font-family: inherit;
-  background-color: #1a1a1a;
+
+  background-color: var(--color-primary);
+  color: var(--text-light);
+
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  opacity: 0.9;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+/* =====================
+   UTILIDADES
+===================== */
 
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }

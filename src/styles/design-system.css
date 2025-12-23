@@ -1,0 +1,67 @@
+/* =========================
+   DESIGN SYSTEM
+   Identidad global
+========================= */
+
+:root {
+  /* =========================
+     TIPOGRAFÍA
+  ========================= */
+  --font-main: 'Poppins', system-ui, sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-xs: 0.85rem;
+  --fs-sm: 0.95rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.4rem;
+  --fs-xl: 2rem;
+  --fs-xxl: 3rem;
+
+  /* =========================
+     PALETA PRINCIPAL
+  ========================= */
+  --color-bg-main: #FAEFED;      /* Isabelline */
+  --color-bg-soft: #EFCEC9;      /* Pippin */
+
+  --color-primary: #911439;      /* Cherrywood */
+  --color-secondary: #38334F;    /* Bastille */
+  --color-dark: #2B2B45;         /* Charade */
+
+  /* =========================
+     TEXTOS
+  ========================= */
+  --text-main: #2B2B45;
+  --text-soft: #38334F;
+  --text-muted: rgba(43, 43, 69, 0.7);
+  --text-light: #FAEFED;
+
+  /* =========================
+     UI
+  ========================= */
+  --color-card-bg: #ffffff;
+  --color-border-soft: rgba(0, 0, 0, 0.08);
+
+  /* =========================
+     SOMBRAS
+  ========================= */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 28px 65px rgba(0, 0, 0, 0.18);
+
+  /* =========================
+     RADIUS
+  ========================= */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* =========================
+     WHATSAPP
+  ========================= */
+  --whatsapp: #25d366;
+  --whatsapp-shadow: rgba(37, 211, 102, 0.35);
+}
