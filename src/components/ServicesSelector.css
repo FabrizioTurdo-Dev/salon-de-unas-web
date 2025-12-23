@@ -29,6 +29,10 @@ ul {
 /* =========================
    CARD DE SERVICIO
 ========================= */
+.service ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 .service-card {
   display: grid;

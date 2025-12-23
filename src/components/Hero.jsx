@@ -42,20 +42,23 @@ function Hero() {
             <motion.div className="hero-content" variants={item}>
 
                 <motion.h1 variants={item}>
-                    Belleza que se nota,<br />detalles que enamoran
+                    Nails by Eli Licurse | Estudio de Uñas
                 </motion.h1>
 
 
                 <motion.p className="hero-subtitle" variants={item}>
-                    Reservá tu turno en pocos pasos y disfrutá una experiencia pensada para vos.
+                    Diseños que hablan por sí mismos. ¡Tu turno, tu estilo!
                 </motion.p>
 
 
                 <motion.div className="hero-steps" variants={item}>
                     <p>¿Cómo funciona?</p>
                     <ul>
-                        <li>Elegí un servicio</li>
-                        <li>Confirmá tu preferencia</li>
+                        <ul>Elegí un servicio
+                            <li>Esculpidas</li>
+                            <li>Semipermanentes</li>
+                            <li>Kapping</li>
+                        </ul>
                         <li>Reservá por WhatsApp</li>
                     </ul>
                 </motion.div>
