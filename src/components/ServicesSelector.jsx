@@ -87,6 +87,7 @@ function ServicesSelector() {
                     once: true,        // se anima una sola vez
                     amount: 0.2        // empieza cuando entra el 20% de la card
                 }}
+                className='service'
             >
                 {services.map((service, index) => {
                     const activo = servicioSeleccionado?.id === service.id;
