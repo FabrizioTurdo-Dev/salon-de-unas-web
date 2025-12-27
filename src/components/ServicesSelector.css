@@ -194,3 +194,46 @@ ul {
     text-align: center;
   }
 }
+/* Cabecera de servicios con Tabs */
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tab-container {
+  display: inline-flex;
+  gap: 1rem;
+  background: var(--color-bg-soft);
+  padding: 0.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-primary-soft);
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-weight: var(--fw-semibold);
+  color: var(--text-soft);
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* Ajuste de la lista para que no use el grid de 2 columnas que tenías arriba 
+   (ul ya es flex column por defecto en tu CSS original) */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1000px; /* Centra el contenido para que no sea gigante en monitores */
+  margin: 0 auto;
+}
+
+/* El CSS que ya tenías de .service-card funcionará perfecto aquí */
