@@ -1,28 +1,44 @@
+/* =========================
+   UBICACIÓN
+========================= */
+
 .location {
   padding: 4rem 1.5rem;
-  background: linear-gradient(180deg, #fff, #fdebf4);
   text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--color-surface) 0%,
+    var(--color-bg-soft) 100%
+  );
 }
 
+/* =========================
+   TEXTO
+========================= */
+
 .location h2 {
-  font-size: 2rem;
+  font-size: var(--fs-xl);
   margin-bottom: 1rem;
-  color: #3a1c3f;
+  color: var(--text-soft);
 }
 
 .location-text {
   max-width: 520px;
   margin: 0 auto 2rem;
-  color: #666;
+  color: var(--text-muted);
   line-height: 1.6;
 }
+
+/* =========================
+   MAPA
+========================= */
 
 .map-wrapper {
   max-width: 900px;
   margin: 0 auto 2rem;
-  border-radius: 20px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .map-wrapper iframe {
@@ -31,21 +47,23 @@
   border: 0;
 }
 
+/* =========================
+   CTA MAPA
+========================= */
+
 .map-cta {
   display: inline-block;
   padding: 14px 26px;
-  border-radius: 999px;
-
-  background: #8c3b76;
-  color: #fff;
-  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: var(--text-light);
+  font-weight: var(--fw-semibold);
   text-decoration: none;
-
+  box-shadow: var(--shadow-brand);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 10px 25px rgba(140, 59, 118, 0.35);
 }
 
 .map-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(140, 59, 118, 0.45);
+  box-shadow: var(--shadow-brand-strong);
 }
